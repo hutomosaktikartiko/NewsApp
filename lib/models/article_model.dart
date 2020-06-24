@@ -1,16 +1,30 @@
-class ArticleModel {
-  String author;
-  String title;
-  String description;
-  String url;
-  String urlToImage;
-  String content;
+part of 'models.dart';
 
-  ArticleModel(
-      {this.author,
-      this.title,
-      this.description,
-      this.url,
-      this.urlToImage,
-      this.content});
+class News extends Equatable {
+  final String author;
+  final String title;
+  final String description;
+  final String url;
+  final String urlToImage;
+  final String content;
+
+  News(
+      {@required this.author,
+      @required this.title,
+      @required this.description,
+      @required this.url,
+      @required this.urlToImage,
+      @required this.content});
+
+  factory News.fromJson(Map<String, dynamic> json) => News(
+      author: json['author'],
+      title: json['title'],
+      description: json['description'],
+      url: json['url'],
+      urlToImage: json['urlToImage'],
+      content: json['content']);
+
+  @override
+  List<Object> get props =>
+      [author, title, description, url, urlToImage, content];
 }
