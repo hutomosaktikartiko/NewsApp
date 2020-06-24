@@ -23,6 +23,8 @@ class PageBloc extends Bloc<PageEvent, PageState> {
       yield OnNewsDetailPage(event.news);
     } else if (event is GoToNewsByCategory) {
       yield OnNewsByCategoryPage(event.selectedCategory);
+    } else if (event is GoToNewsBySearch) {
+      yield OnNewsBySearchPage();
     }
   }
 }

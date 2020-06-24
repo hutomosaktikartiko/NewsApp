@@ -19,3 +19,4 @@ part 'news_favorite_page.dart';
 part 'splash_page.dart';
 part 'wrapper.dart';
 part 'main_page.dart';
+part 'news_by_search.dart';

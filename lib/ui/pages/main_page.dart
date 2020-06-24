@@ -58,7 +58,7 @@ class _MainPageState extends State<MainPage> {
                 ),
               ),
               onPressed: () {
-                context.bloc<PageBloc>().add(GoToSplashPage());
+                context.bloc<PageBloc>().add(GoToNewsBySearch());
               }),
         ),
       )

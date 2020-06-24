@@ -35,7 +35,7 @@ class NewsServices {
   static Future<List<News>> getNewsBySearch(String search,
       {http.Client client}) async {
     String url =
-        "https://newsapi.org/v2/top-headlines?q=$search&apiKey=$apiKey";
+        "https://newsapi.org/v2/top-headlines?q=$search&country=id&apiKey=$apiKey";
     client ??= http.Client();
     var response = await http.get(url);
     if (response.statusCode != 200) {

@@ -36,3 +36,8 @@ class OnNewsByCategoryPage extends PageState {
   @override
   List<Object> get props => [selectedCategory];
 }
+
+class OnNewsBySearchPage extends PageState {
+  @override
+  List<Object> get props => [];
+}

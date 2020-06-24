@@ -10,7 +10,9 @@ class Wrapper extends StatelessWidget {
               ? NewsDetail(pageState.news)
               : (pageState is OnNewsByCategoryPage)
                   ? NewsByCategory(pageState.selectedCategory)
-                  : SplashPage(),
+                  : (pageState is OnNewsBySearchPage)
+                      ? NewsBySearch()
+                      : SplashPage(),
     );
   }
 }
