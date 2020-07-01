@@ -10,7 +10,7 @@ In this application Showing the latest Indonesian news Using the API from newsap
 - Feature grouping by category
 - Save news feature
 
-## librarya used
+## librarys used
 - [http](https://pub.dev/packages/http)
 - [webview_flutter](https://pub.dev/packages/webview_flutter)
 - [equatable](https://pub.dev/packages/equatable)
@@ -21,5 +21,5 @@ In this application Showing the latest Indonesian news Using the API from newsap
 
 ## Screenshots
 ## Install App
-- Test on Xiaomi Redmi 4x
-  [Download](https://drive.google.com/file/d/1SYnHTdN12-tWdF37SMvuhNwkPsdkpc2i/view?usp=sharing)
+Test on Xiaomi Redmi 4x
+[Download](https://drive.google.com/file/d/1SYnHTdN12-tWdF37SMvuhNwkPsdkpc2i/view?usp=sharing)
