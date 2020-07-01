@@ -41,3 +41,8 @@ class OnNewsBySearchPage extends PageState {
   @override
   List<Object> get props => [];
 }
+
+class OnNewsSavePage extends PageState {
+  @override
+  List<Object> get props => [];
+}

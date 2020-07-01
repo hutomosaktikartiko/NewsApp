@@ -1,9 +1,6 @@
 part of 'pages.dart';
 
 class NewsBySearch extends StatefulWidget {
-  // final String searchKeyword;
-
-  // NewsBySearch(this.searchKeyword);
   @override
   _NewsBySearchState createState() => _NewsBySearchState();
 }

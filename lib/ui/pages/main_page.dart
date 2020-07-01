@@ -34,10 +34,7 @@ class _MainPageState extends State<MainPage> {
             bottomNavBarIndex = index;
           });
         },
-        children: <Widget>[
-          NewsPage(),
-          Text("Berita Tersimpan"),
-        ],
+        children: <Widget>[NewsPage(), NewsSavePage()],
       ),
       createCustomBottonNavBar(),
       Align(
@@ -92,7 +89,7 @@ class _MainPageState extends State<MainPage> {
                 items: [
                   BottomNavigationBarItem(
                       title: Text(
-                        "Berita",
+                        "Berita Terbaru",
                         style: GoogleFonts.raleway(
                             fontSize: 13, fontWeight: FontWeight.w600),
                       ),

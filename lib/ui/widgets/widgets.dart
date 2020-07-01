@@ -5,3 +5,4 @@ import 'package:news_app/shared/shared.dart';
 
 part 'category_card.dart';
 part 'news_card.dart';
+part 'news_save_card.dart';

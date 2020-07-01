@@ -1,9 +1,15 @@
 part of 'pages.dart';
 
-class NewsDetail extends StatelessWidget {
+class NewsDetail extends StatefulWidget {
   final News news;
   NewsDetail(this.news);
 
+  @override
+  _NewsDetailState createState() => _NewsDetailState();
+}
+
+class _NewsDetailState extends State<NewsDetail> {
+  List<News> listNewsSave = [];
   final Completer<WebViewController> _completer =
       Completer<WebViewController>();
 
@@ -23,7 +29,7 @@ class NewsDetail extends StatelessWidget {
             child: Stack(
               children: <Widget>[
                 WebView(
-                  initialUrl: news.url,
+                  initialUrl: widget.news.url,
                   onWebViewCreated: (WebViewController webViewController) {
                     _completer.complete(webViewController);
                   },
@@ -52,16 +58,18 @@ class NewsDetail extends StatelessWidget {
           floatingActionButton: FloatingActionButton(
               backgroundColor: Colors.blue,
               child: Icon(MdiIcons.briefcasePlusOutline),
-              onPressed: () {}),
+              onPressed: () {
+                NewsSave.saveNews(news: widget.news).then((value) {
+                  Flushbar(
+                    duration: Duration(milliseconds: 1500),
+                    flushbarPosition: FlushbarPosition.TOP,
+                    backgroundColor: Color(0xFF03fca1),
+                    message: "Berita berhasil disimpan!",
+                  )..show(context);
+                });
+              }),
         ),
       ),
     );
   }
-
-  // Widget saveButton() {
-  //   return Icon(
-  //     Icons.save,
-  //     color: Colors.blue,
-  //   );
-  // }
 }

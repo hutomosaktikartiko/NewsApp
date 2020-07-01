@@ -36,3 +36,8 @@ class GoToNewsBySearch extends PageEvent {
   @override
   List<Object> get props => [];
 }
+
+class GoToNewsSavePage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}

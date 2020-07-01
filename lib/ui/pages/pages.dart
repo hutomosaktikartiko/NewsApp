@@ -1,4 +1,6 @@
 import 'dart:async';
+import 'package:flushbar/flushbar.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -20,3 +22,4 @@ part 'splash_page.dart';
 part 'wrapper.dart';
 part 'main_page.dart';
 part 'news_by_search.dart';
+part 'news_save_page.dart';
