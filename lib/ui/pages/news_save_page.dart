@@ -24,7 +24,6 @@ class _NewsSavePageState extends State<NewsSavePage> {
             builder: (_, snapshot) {
               if (snapshot.hasData) {
                 newsSave = snapshot.data;
-                print("load $newsSave");
                 return (newsSave.length < 1)
                     ? Container(
                         height: MediaQuery.of(context).size.height / 2,
@@ -47,14 +46,14 @@ class _NewsSavePageState extends State<NewsSavePage> {
                                           content: Text(
                                               "Apakah anda yakin akan menghapus berita ini?"),
                                           actions: <Widget>[
-                                            FlatButton(
+                                            TextButton(
                                                 onPressed: () {
                                                   Navigator.of(context)
                                                       .pop(true);
                                                   setState(() {});
                                                 },
                                                 child: Text("Iya")),
-                                            FlatButton(
+                                            TextButton(
                                                 onPressed: () {
                                                   Navigator.of(context)
                                                       .pop(false);
@@ -81,7 +80,7 @@ class _NewsSavePageState extends State<NewsSavePage> {
                                             title: Text('Berhasil!'),
                                             content: Text(message),
                                             actions: <Widget>[
-                                              FlatButton(
+                                              TextButton(
                                                   onPressed: () {
                                                     Navigator.of(context).pop();
                                                   },

@@ -13,6 +13,26 @@ class _NewsDetailState extends State<NewsDetail> {
   final Completer<WebViewController> _completer =
       Completer<WebViewController>();
 
+  Future<List<News>> listSaveNews;
+  bool isSaved = false;
+
+  @override
+  void initState() {
+    listSaveNews = NewsSave.getAllSaveNews();
+
+    if (mounted) {
+      listSaveNews.then((value) => value.forEach((element) {
+            if (element.url == widget.news.url) {
+              setState(() {
+                isSaved = true;
+              });
+            }
+          }));
+    }
+
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -55,21 +75,43 @@ class _NewsDetailState extends State<NewsDetail> {
               ],
             ),
           ),
-          floatingActionButton: FloatingActionButton(
-              backgroundColor: Colors.blue,
-              child: Icon(MdiIcons.briefcasePlusOutline),
-              onPressed: () {
-                NewsSave.saveNews(news: widget.news).then((value) {
-                  Flushbar(
-                    duration: Duration(milliseconds: 1500),
-                    flushbarPosition: FlushbarPosition.TOP,
-                    backgroundColor: Color(0xFF03fca1),
-                    message: "Berita berhasil disimpan!",
-                  )..show(context);
-                });
-              }),
+          floatingActionButton:
+              (isSaved) ? buildButtonSaved(context) : buildButtonSave(context),
         ),
       ),
     );
+  }
+
+  FloatingActionButton buildButtonSaved(BuildContext context) {
+    return FloatingActionButton(
+        backgroundColor: Colors.blue,
+        child: Icon(MdiIcons.check),
+        onPressed: () {
+          Flushbar(
+            duration: Duration(milliseconds: 1500),
+            flushbarPosition: FlushbarPosition.TOP,
+            backgroundColor: Color(0xFF03fca1),
+            message: "Berita sudah tersimpan!",
+          )..show(context);
+        });
+  }
+
+  FloatingActionButton buildButtonSave(BuildContext context) {
+    return FloatingActionButton(
+        backgroundColor: Colors.blue,
+        child: Icon(MdiIcons.briefcasePlusOutline),
+        onPressed: () {
+          NewsSave.saveNews(news: widget.news).then((value) {
+            setState(() {
+              isSaved = true;
+            });
+            Flushbar(
+              duration: Duration(milliseconds: 1500),
+              flushbarPosition: FlushbarPosition.TOP,
+              backgroundColor: Color(0xFF03fca1),
+              message: "Berita berhasil disimpan!",
+            )..show(context);
+          });
+        });
   }
 }

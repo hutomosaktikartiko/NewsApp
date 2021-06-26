@@ -30,7 +30,7 @@ dependencies:
   material_design_icons_flutter: ^4.0.5345
   flutter_spinkit: ^4.1.2+1
   shared_preferences: ^0.5.7+3
-  flushbar: ^1.10.4
+  another_flushbar: ^1.10.11
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

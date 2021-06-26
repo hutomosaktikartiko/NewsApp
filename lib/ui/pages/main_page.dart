@@ -79,20 +79,17 @@ class _MainPageState extends State<MainPage> {
                 selectedItemColor: mainColor,
                 unselectedItemColor: Color(0xFFE5E5E5),
                 currentIndex: bottomNavBarIndex,
+                selectedLabelStyle: GoogleFonts.raleway(
+                    fontSize: 13, fontWeight: FontWeight.w600),
                 onTap: (index) {
                   setState(() {
                     bottomNavBarIndex = index;
-                    //ketika di tab, page juga pindah
                     pageController.jumpToPage(index);
                   });
                 },
                 items: [
                   BottomNavigationBarItem(
-                      title: Text(
-                        "Berita Terbaru",
-                        style: GoogleFonts.raleway(
-                            fontSize: 13, fontWeight: FontWeight.w600),
-                      ),
+                      label: "Berita Terbaru",
                       icon: Container(
                           margin: EdgeInsets.only(bottom: 6),
                           height: 20,
@@ -100,11 +97,7 @@ class _MainPageState extends State<MainPage> {
                             MdiIcons.newspaperVariantOutline,
                           ))),
                   BottomNavigationBarItem(
-                      title: Text(
-                        "Berita Tersimpan",
-                        style: GoogleFonts.raleway(
-                            fontSize: 13, fontWeight: FontWeight.w600),
-                      ),
+                      label: "Berita Tersimpan",
                       icon: Container(
                           margin: EdgeInsets.only(bottom: 6),
                           height: 20,

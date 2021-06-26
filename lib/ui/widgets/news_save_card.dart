@@ -40,32 +40,34 @@ class NewsSaveCard extends StatelessWidget {
                       4,
             ),
             SizedBox(width: 5),
-            Padding(
-              padding: const EdgeInsets.only(top: 8.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  SizedBox(
-                    width: (MediaQuery.of(context).size.width -
-                        2 * defaultMargin -
-                        100),
-                    child: Text(
-                      news.title,
-                      style: blackTextFont.copyWith(
-                          fontSize: 16, fontWeight: FontWeight.bold),
-                      textAlign: TextAlign.start,
-                      maxLines: 2,
-                      overflow: TextOverflow.clip,
+            Expanded(
+                          child: Padding(
+                padding: const EdgeInsets.only(top: 8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                      width: (MediaQuery.of(context).size.width -
+                          2 * defaultMargin -
+                          100),
+                      child: Text(
+                        news.title,
+                        style: blackTextFont.copyWith(
+                            fontSize: 16, fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.start,
+                        maxLines: 2,
+                        overflow: TextOverflow.clip,
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 8.0),
-                    child: Text(
-                      news.name,
-                      style: blackTextFont.copyWith(fontSize: 13),
-                    ),
-                  )
-                ],
+                    Padding(
+                      padding: const EdgeInsets.only(top: 8.0),
+                      child: Text(
+                        news.name,
+                        style: blackTextFont.copyWith(fontSize: 13),
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
           ],

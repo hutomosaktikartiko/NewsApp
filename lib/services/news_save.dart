@@ -1,29 +1,6 @@
 part of 'services.dart';
 
 class NewsSave {
-  // static const newsSavelist = "newsSavelistt";
-  // static getListNewsSave() async {
-  //   SharedPreferences pref = await SharedPreferences.getInstance();
-  //   var data =
-  //       await json.decode(pref.getStringList(newsSavelist) ?? "Tidak ada data");
-  //   List result = data;
-  //   print(result);
-  //   return result.map((e) => News.fromJson(e)).toList();
-  // }
-
-  // static saveNews(selectedNewsSave) async {
-  //   SharedPreferences pref = await SharedPreferences.getInstance();
-
-  //   List<String> name = json.encode(electedNewsSave.toString());
-
-  //   pref.setStringList(newsSavelist, name);
-  //   print("Save $newsSavelist");
-  // }
-
-  // static removeNew(String key) async {
-  //   SharedPreferences pref = await SharedPreferences.getInstance();
-  //   pref.remove(key);
-  // }
   static Future saveNews({News news}) async {
     final pref = await SharedPreferences.getInstance();
 
@@ -61,8 +38,7 @@ class NewsSave {
           content: content[6]);
       listNews.add(news);
     });
-
-    print(listNews);
+    
     return listNews;
   }
 

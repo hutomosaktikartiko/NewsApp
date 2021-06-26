@@ -51,7 +51,7 @@ class NewsCard extends StatelessWidget {
             ),
             SizedBox(height: 8),
             Text(
-              news.description,
+              news.description ?? "",
               style: blackTextFont.copyWith(fontSize: 13),
             )
           ],
