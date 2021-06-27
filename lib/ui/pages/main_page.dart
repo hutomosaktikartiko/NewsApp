@@ -67,7 +67,7 @@ class _MainPageState extends State<MainPage> {
         child: ClipPath(
           clipper: BottomNavBarClipper(),
           child: Container(
-            height: 70,
+            constraints: BoxConstraints(maxHeight: 83, minHeight: 70),
             decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
