@@ -35,15 +35,15 @@ class _NewsDetailState extends State<NewsDetail> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: WillPopScope(
-        onWillPop: () async {
-          context.bloc<PageBloc>().add(GoToMainPage());
+    return WillPopScope(
+      onWillPop: () async {
+        context.bloc<PageBloc>().add(GoToMainPage());
 
-          return;
-        },
-        child: Scaffold(
-          body: Container(
+        return;
+      },
+      child: Scaffold(
+        body: SafeArea(
+                  child: Container(
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
             child: Stack(
@@ -75,9 +75,9 @@ class _NewsDetailState extends State<NewsDetail> {
               ],
             ),
           ),
-          floatingActionButton:
-              (isSaved) ? buildButtonSaved(context) : buildButtonSave(context),
         ),
+        floatingActionButton:
+            (isSaved) ? buildButtonSaved(context) : buildButtonSave(context),
       ),
     );
   }
@@ -85,7 +85,7 @@ class _NewsDetailState extends State<NewsDetail> {
   FloatingActionButton buildButtonSaved(BuildContext context) {
     return FloatingActionButton(
         backgroundColor: Colors.blue,
-        child: Icon(MdiIcons.check),
+        child: Icon(Icons.favorite),
         onPressed: () {
           Flushbar(
             duration: Duration(milliseconds: 1500),
@@ -99,7 +99,7 @@ class _NewsDetailState extends State<NewsDetail> {
   FloatingActionButton buildButtonSave(BuildContext context) {
     return FloatingActionButton(
         backgroundColor: Colors.blue,
-        child: Icon(MdiIcons.briefcasePlusOutline),
+        child: Icon(Icons.favorite_border),
         onPressed: () {
           NewsSave.saveNews(news: widget.news).then((value) {
             setState(() {
