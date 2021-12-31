@@ -1,4 +1,4 @@
-# Flutter NewApp
+# NewsApp
 
 ## About
 
