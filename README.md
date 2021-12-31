@@ -6,9 +6,9 @@ In this application Showing the latest Indonesian news Using the API from newsap
 
 ## Features:
 - Show the latest Indonesian news
-- Search news feature
-- Feature grouping by category
-- Save news feature
+- News search
+- News grouping by category
+- Save news
 
 ## librarys used
 - [http](https://pub.dev/packages/http)
