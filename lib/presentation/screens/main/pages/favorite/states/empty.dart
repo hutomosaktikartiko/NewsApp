@@ -7,18 +7,22 @@ class Empty extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: SizeConfig.screenHeight / 2,
-      child: Center(
-        child: Text(
-          "Data berita tidak ditemukan",
-          textAlign: TextAlign.center,
-          style: CustomTextStyle.subHeading2.copyWith(
-            fontSize: 15,
-            color: Colors.red,
+    return Column(
+      children: [
+        SizedBox(
+          height: SizeConfig.screenHeight * 0.35,
+        ),
+        Center(
+          child: Text(
+            "Data berita tidak ditemukan",
+            textAlign: TextAlign.center,
+            style: CustomTextStyle.subHeading2.copyWith(
+              fontSize: 15,
+              color: Colors.red,
+            ),
           ),
         ),
-      ),
+      ],
     );
   }
 }

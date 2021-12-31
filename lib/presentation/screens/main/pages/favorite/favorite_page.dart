@@ -21,32 +21,35 @@ class _FavoritePageState extends State<FavoritePage> {
       body: SafeArea(
         child: SingleChildScrollView(
           padding: EdgeInsets.symmetric(horizontal: SizeConfig.defaultMargin),
-          child: Column(
-            children: <Widget>[
-              SizedBox(
-                height: 20,
-              ),
-              Text(
-                "Berita Tersimpan",
-                style: CustomTextStyle.subHeading1.copyWith(
-                  color: Colors.black,
+          child: LimitedBox(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                SizedBox(
+                  height: 20,
                 ),
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              BlocBuilder<NewsFavoriteCubit, NewsFavoriteState>(
-                builder: (context, state) {
-                  if (state.listNews.length > 0) {
-                    return Loaded(
-                      listNews: state.listNews,
-                    );
-                  } else {
-                    return Empty();
-                  }
-                },
-              ),
-            ],
+                Text(
+                  "Berita Tersimpan",
+                  style: CustomTextStyle.subHeading1.copyWith(
+                    color: Colors.black,
+                  ),
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                BlocBuilder<NewsFavoriteCubit, NewsFavoriteState>(
+                  builder: (context, state) {
+                    if (state.listNews.length > 0) {
+                      return Loaded(
+                        listNews: state.listNews,
+                      );
+                    } else {
+                      return Empty();
+                    }
+                  },
+                ),
+              ],
+            ),
           ),
         ),
       ),
