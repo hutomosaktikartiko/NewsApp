@@ -65,7 +65,8 @@ class _MainScreenState extends State<MainScreen> {
         selectedItemColor: CustomColor.main,
         unselectedItemColor: Color(0xFFE5E5E5),
         currentIndex: selectedIndex,
-        selectedLabelStyle: CustomTextStyle.subHeading2,
+        selectedLabelStyle: CustomTextStyle.body1,
+        unselectedLabelStyle: CustomTextStyle.body1,
         onTap: (index) {
           setState(() {
             selectedIndex = index;
@@ -73,25 +74,29 @@ class _MainScreenState extends State<MainScreen> {
           });
         },
         items: [
-          BottomNavigationBarItem(
+          buildBottomNavigationBarItem(
             label: "Berita Terbaru",
-            icon: Container(
-              margin: EdgeInsets.only(bottom: 6),
-              height: 20,
-              child: Icon(
-                MdiIcons.newspaperVariantOutline,
-              ),
-            ),
+            iconData: MdiIcons.newspaperVariantOutline,
           ),
-          BottomNavigationBarItem(
+          buildBottomNavigationBarItem(
             label: "Berita Tersimpan",
-            icon: Container(
-              margin: EdgeInsets.only(bottom: 6),
-              height: 20,
-              child: Icon(MdiIcons.briefcaseCheckOutline),
-            ),
+            iconData: MdiIcons.briefcaseCheckOutline,
           ),
         ],
+      ),
+    );
+  }
+
+  BottomNavigationBarItem buildBottomNavigationBarItem({
+    required String label,
+    required IconData iconData,
+  }) {
+    return BottomNavigationBarItem(
+      label: label,
+      icon: Container(
+        margin: EdgeInsets.only(bottom: 6),
+        height: 20,
+        child: Icon(iconData),
       ),
     );
   }
