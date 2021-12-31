@@ -26,9 +26,12 @@ class Body extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(
-              "assets/images/logo.png",
-              height: 103,
+            ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image.asset(
+                "assets/images/logo.jpg",
+                height: 100,
+              ),
             ),
             SizedBox(
               height: 20,
