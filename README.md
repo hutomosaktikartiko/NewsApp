@@ -2,7 +2,7 @@
 
 ## About
 
-In this application Showing the latest Indonesian news Using the API from newsapi.org with webview and Use BLoC for design pattern.
+In this application Showing the latest Indonesian news Using the API from newsapi.org with webview and Use Cubit for design pattern.
 
 ## Some of the features available in this application, that is :
 - Show the latest Indonesian news
@@ -14,19 +14,36 @@ In this application Showing the latest Indonesian news Using the API from newsap
 - [http](https://pub.dev/packages/http)
 - [webview_flutter](https://pub.dev/packages/webview_flutter)
 - [equatable](https://pub.dev/packages/equatable)
-- [provider](https://pub.dev/packages/provider)
 - [flutter_bloc](https://pub.dev/packages/flutter_bloc)
 - [shared_preferences](https://pub.dev/packages/shared_preferences)
 - etc.
 
-## Screenshots
-![Splash Screen](https://github.com/hutomosaktikartiko/Flutter-NewsApp/blob/master/Screenshot%5B1%5D.jpg)
-![home](https://github.com/hutomosaktikartiko/Flutter-NewsApp/blob/master/Screenshot%5B2%5D.jpg)
-![grouping by category](https://github.com/hutomosaktikartiko/Flutter-NewsApp/blob/master/Screenshot%5B3%5D.jpg)
-![search news](https://github.com/hutomosaktikartiko/Flutter-NewsApp/blob/master/Screenshot%5B4%5D.jpg)
-![news detail](https://github.com/hutomosaktikartiko/Flutter-NewsApp/blob/master/Screenshot%5B5%5D.jpg)
-![news save page](https://github.com/hutomosaktikartiko/Flutter-NewsApp/blob/master/Screenshot%5B6%5D.jpg)
+## API Docs
+[NewsAPI](https://newsapi.org/docs)
 
-## Install App
-Test on Xiaomi Redmi 4x
-[Download](https://drive.google.com/file/d/1SYnHTdN12-tWdF37SMvuhNwkPsdkpc2i/view?usp=sharing)
+## Project Structure
+```
+-assets/
+    |--fonts/               -> Any fonts will we use
+        |--font_name
+    |--images               -> Offline images like placeholder, etc.
+-lib/
+    |--core/
+        |--config           -> Static variable
+        |--error            -> Error handling with dio Interceptors
+        |--network          -> Check internet status (connected or disconnect)
+        |--observer         -> Bloc Observer
+        |--utils            -> Others like custom extension, etc.
+    |--data/
+        |--datasources      -> Data sources (remote and local)
+        |--models           -> App models
+        |--repositories     -> To determine where the data is taken from (Local or remote)
+    |--presentation/
+        |--cubit            -> State management
+        |--pages            -> Part of screen
+        |--screens          -> Full view of app
+        |--widgets          -> Reusable widgets
+    |--injection_container  -> Depedency Injection
+-test/                      -> Unit test
+    |--fixtures/            -> Data Dummy for unit test
+```
