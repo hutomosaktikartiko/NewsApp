@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:news_app/presentation/cubit/cubits.dart';
+
+import '../cubit/cubits.dart';
 
 
 class CheckConnectionScreen extends StatelessWidget {

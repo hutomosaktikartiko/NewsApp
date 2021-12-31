@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:news_app/core/config/custom_text_style.dart';
-import 'package:news_app/core/config/size_config.dart';
-import 'package:news_app/core/utils/screen_navigator.dart';
-import 'package:news_app/core/utils/utils.dart';
-import 'package:news_app/presentation/cubit/cubits.dart';
+
+import '../../../core/config/custom_text_style.dart';
+import '../../../core/config/size_config.dart';
+import '../../../core/utils/screen_navigator.dart';
+import '../../../core/utils/utils.dart';
+import '../../cubit/cubits.dart';
 import 'states/empty.dart';
-import 'states/loading.dart';
-import 'states/loaded.dart';
 import 'states/error.dart';
+import 'states/loaded.dart';
+import 'states/loading.dart';
 
 class NewsSearchScreen extends StatefulWidget {
   const NewsSearchScreen({Key? key}) : super(key: key);

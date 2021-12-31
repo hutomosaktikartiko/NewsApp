@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/core/config/custom_color.dart';
 
+import '../../../../../../core/config/custom_color.dart';
 
 class DimissibleBackground extends StatelessWidget {
   const DimissibleBackground({

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/presentation/widgets/check_connection_screen.dart';
 
 import '../../../core/config/size_config.dart';
+import '../../widgets/check_connection_screen.dart';
 import 'states/error.dart';
 import 'states/loaded.dart';
 import 'states/loading.dart';

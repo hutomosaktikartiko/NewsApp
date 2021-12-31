@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/core/config/custom_text_style.dart';
-import 'package:news_app/core/config/size_config.dart';
-import 'package:news_app/data/models/category_model.dart';
-import 'package:news_app/presentation/cubit/cubits.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:news_app/presentation/cubit/tab_category/tab_category_cubit.dart';
-import 'package:news_app/presentation/widgets/category_model.dart';
 
+import '../../../../../core/config/custom_text_style.dart';
+import '../../../../../core/config/size_config.dart';
+import '../../../../../data/models/category_model.dart';
+import '../../../../cubit/cubits.dart';
+import '../../../../cubit/tab_category/tab_category_cubit.dart';
+import '../../../../widgets/category_model.dart';
 import 'states/empty.dart';
-import 'states/loading.dart';
-import 'states/loaded.dart';
 import 'states/error.dart';
+import 'states/loaded.dart';
+import 'states/loading.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);

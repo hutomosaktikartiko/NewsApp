@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/core/config/custom_color.dart';
-import 'package:news_app/data/models/api_return_value.dart';
-import 'package:news_app/data/models/news_model.dart';
-import 'package:news_app/presentation/cubit/cubits.dart';
-import 'package:news_app/presentation/screens/main/pages/favorite/widgets/dismissible_background.dart';
-import 'package:news_app/presentation/widgets/custom_dialog.dart';
-import 'package:news_app/presentation/widgets/news_save_card.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../../../../core/config/custom_color.dart';
+import '../../../../../../data/models/api_return_value.dart';
+import '../../../../../../data/models/news_model.dart';
+import '../../../../../cubit/cubits.dart';
+import '../../../../../widgets/custom_dialog.dart';
+import '../../../../../widgets/news_save_card.dart';
+import '../widgets/dismissible_background.dart';
 
 class Loaded extends StatelessWidget {
   const Loaded({

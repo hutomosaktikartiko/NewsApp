@@ -2,13 +2,14 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:news_app/core/config/size_config.dart';
-import 'package:news_app/core/utils/screen_navigator.dart';
-import 'package:news_app/data/models/news_model.dart';
-import 'package:news_app/presentation/cubit/cubits.dart';
-import 'package:news_app/presentation/cubit/news_favorite/news_favorite_cubit.dart';
-import 'package:news_app/presentation/widgets/button_news_save.dart';
 import 'package:webview_flutter/webview_flutter.dart';
+
+import '../../../core/config/size_config.dart';
+import '../../../core/utils/screen_navigator.dart';
+import '../../../data/models/news_model.dart';
+import '../../cubit/cubits.dart';
+import '../../cubit/news_favorite/news_favorite_cubit.dart';
+import '../../widgets/button_news_save.dart';
 
 class NewsDetailScreen extends StatefulWidget {
   const NewsDetailScreen({

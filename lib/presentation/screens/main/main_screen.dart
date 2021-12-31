@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:news_app/core/config/custom_color.dart';
-import 'package:news_app/core/config/custom_text_style.dart';
-import 'package:news_app/core/utils/screen_navigator.dart';
-import 'package:news_app/presentation/screens/main/pages/favorite/favorite_page.dart';
-import 'package:news_app/presentation/screens/main/pages/home/home_page.dart';
-import 'package:news_app/presentation/screens/news_search/news_search_screen.dart';
+
+import '../../../core/config/custom_color.dart';
+import '../../../core/config/custom_text_style.dart';
+import '../../../core/utils/screen_navigator.dart';
+import '../news_search/news_search_screen.dart';
+import 'pages/favorite/favorite_page.dart';
+import 'pages/home/home_page.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);

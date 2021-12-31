@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/core/config/custom_color.dart';
-import 'package:news_app/data/models/api_return_value.dart';
-import 'package:news_app/data/models/news_model.dart';
-import 'package:news_app/presentation/cubit/news_favorite/news_favorite_cubit.dart';
-import 'package:news_app/presentation/widgets/custom_dialog.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../core/config/custom_color.dart';
+import '../../data/models/api_return_value.dart';
+import '../../data/models/news_model.dart';
+import '../cubit/news_favorite/news_favorite_cubit.dart';
+import 'custom_dialog.dart';
 
 class ButtonNewsSave extends StatelessWidget {
   const ButtonNewsSave({

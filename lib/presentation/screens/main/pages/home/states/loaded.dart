@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/data/models/news_model.dart';
-import 'package:news_app/presentation/widgets/news_card.dart';
+
+import '../../../../../../data/models/news_model.dart';
+import '../../../../../widgets/news_card.dart';
 
 class Loaded extends StatelessWidget {
   const Loaded({

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/core/config/custom_text_style.dart';
-import 'package:news_app/data/models/category_model.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:news_app/presentation/cubit/tab_category/tab_category_cubit.dart';
+
+import '../../core/config/custom_text_style.dart';
+import '../../data/models/category_model.dart';
+import '../cubit/tab_category/tab_category_cubit.dart';
 
 class CategoryCard extends StatelessWidget {
   final CategoryModel category;

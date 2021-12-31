@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/core/config/custom_text_style.dart';
-import 'package:news_app/core/config/size_config.dart';
-import 'package:news_app/core/utils/screen_navigator.dart';
-import 'package:news_app/data/models/news_model.dart';
-import 'package:news_app/presentation/screens/news_detail/news_detail_screen.dart';
+
+import '../../core/config/custom_text_style.dart';
+import '../../core/config/size_config.dart';
+import '../../core/utils/screen_navigator.dart';
+import '../../data/models/news_model.dart';
+import '../screens/news_detail/news_detail_screen.dart';
 
 class NewsCard extends StatelessWidget {
   final NewsModel news;

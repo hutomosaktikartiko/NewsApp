@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/core/config/custom_text_style.dart';
-import 'package:news_app/core/config/size_config.dart';
+
+import '../../../../../../core/config/custom_text_style.dart';
+import '../../../../../../core/config/size_config.dart';
 
 class Empty extends StatelessWidget {
   const Empty({Key? key}) : super(key: key);
