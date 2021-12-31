@@ -1,16 +1,18 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:news_app/presentation/screens/main/main_screen.dart';
-import 'package:news_app/presentation/screens/splash/splash_screen.dart';
 
 import 'core/config/theme_config.dart';
 import 'core/oberservers/app_bloc_observer.dart';
+import 'core/oberservers/firebase_analytics_observer_info.dart';
 import 'injection_container.dart' as di;
 import 'presentation/cubit/cubits.dart';
+import 'presentation/screens/splash/splash_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Bloc.observer = AppBlocObserver();
+  Firebase.initializeApp();
   await di.init();
 
   runApp(MyApp());
@@ -42,6 +44,9 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         theme: ThemeConfig.defaultTheme,
         home: SplashScreen(),
+        navigatorObservers: [
+          di.sl<FirebaseAnalyticsObserverInfo>().analyticsObserver,
+        ],
       ),
     );
   }
