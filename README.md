@@ -1,7 +1,6 @@
 # NewsApp
 
 ## About
-
 In this application Showing the latest Indonesian news Using the API from newsapi.org with webview and Use Cubit for design pattern.
 
 ## Features:
