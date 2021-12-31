@@ -1,7 +1,10 @@
+import 'dart:io';
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'core/config/custom_http_overide.dart';
 import 'core/config/theme_config.dart';
 import 'core/oberservers/app_bloc_observer.dart';
 import 'core/oberservers/firebase_analytics_observer_info.dart';
@@ -12,6 +15,7 @@ import 'presentation/screens/splash/splash_screen.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Bloc.observer = AppBlocObserver();
+  HttpOverrides.global = CustomHttpOverrides();
   Firebase.initializeApp();
   await di.init();
 
