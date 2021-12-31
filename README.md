@@ -4,7 +4,7 @@
 
 In this application Showing the latest Indonesian news Using the API from newsapi.org with webview and Use Cubit for design pattern.
 
-## Some of the features available in this application, that is :
+## Features:
 - Show the latest Indonesian news
 - Search news feature
 - Feature grouping by category
